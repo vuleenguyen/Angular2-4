@@ -1,0 +1,10 @@
+.form-control {
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.username {
+    color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}

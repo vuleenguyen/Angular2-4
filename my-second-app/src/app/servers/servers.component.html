@@ -1,0 +1,6 @@
+<button [ngClass]="{'btn btn-warning' : true}" (click)="toggleSecret()">Display Details</button>
+<p [ngClass]="{toggleContent: true}" *ngIf="isShowSecret">Secret Password = tuna</p>
+<div *ngFor="let log of buttonLogs; let i = index"
+    [ngStyle]="{backgroundColor: i+1 >= 5 ? 'blue' : 'white'}"
+    [ngClass]="{'buttonLog': i+1 >= 5}"
+>{{log}}</div>

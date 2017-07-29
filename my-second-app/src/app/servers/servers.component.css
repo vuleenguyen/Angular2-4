@@ -1,0 +1,10 @@
+.toggleContent {
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+.buttonLog {
+    color: white;
+    border: 1px solid grey;
+}

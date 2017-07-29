@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="display-1">Game Control Assignment</h1>
+      <app-game-control-component (startGameEvt)="startGameEvent($event)"></app-game-control-component>
+      <hr>
+      <app-odd-component *ngFor="let odd of oddNumbers" [oddNumber] = "odd"></app-odd-component>
+      <app-even-component *ngFor="let even of evenNumbers" [evenNumber] = "even"></app-even-component>
+    </div>
+  </div>
+</div>
