@@ -6,20 +6,31 @@ import { Directive, HostListener, HostBinding, Input, OnInit } from '@angular/co
 export class DropdownDirective implements OnInit {
   @Input() defaultClass: string;
  
-  @HostBinding('class') openClass: string;
+  // @HostBinding('class') openClass: string;
   
-  constructor() { }
+  // constructor() { }
+
+  // ngOnInit() {
+  //   this.openClass = this.defaultClass;
+  // }
+
+  // @HostListener('click') toggleOpen(eventData:Event) {
+  //   if (this.openClass.indexOf('open') !== -1) {
+  //     this.openClass = this.defaultClass;
+  //   } else {
+  //     this.openClass = this.openClass.concat(" open");
+  //   }
+  // }
+
+  @HostBinding('class.open') isOpen: boolean = false;
+
+  constructor() {}
+
+  @HostListener('click') toggleOpen(eventData:Event) {
+    this.isOpen = !this.isOpen;
+  }
 
   ngOnInit() {
-    this.openClass = this.defaultClass;
+    
   }
-
-  @HostListener('click') onclick(eventData:Event) {
-    if (this.openClass.indexOf('open') !== -1) {
-      this.openClass = this.defaultClass;
-    } else {
-      this.openClass = this.openClass.concat(" open");
-    }
-  }
-
 }
