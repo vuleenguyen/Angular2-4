@@ -4,12 +4,16 @@ import { AccountsService } from "app/accounts.service";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [AccountsService]
+  styleUrls: ['./app.component.css']
+  // providers: [AccountsService]
 })
 export class AppComponent implements OnInit {
   accounts: {name: string, status: string}[] =  [];
-  constructor(private accountsService: AccountsService) {}
+  constructor(private accountsService: AccountsService) {
+     this.accountsService.statusUpdated.subscribe(
+      (status: string) => alert('New status: ' + status)
+    );
+  }
 
   ngOnInit() {
     this.accounts = this.accountsService.accounts;
