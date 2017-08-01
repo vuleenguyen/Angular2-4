@@ -20,6 +20,5 @@ export class ActiveUsersComponent implements OnInit {
 
   onSetToInactive(id: number) {
     this.usersService.onSetToInactive(id);
-    console.log("The amount convert from Active to InActive: " + ++this.counterService.count);
   }   
 }
