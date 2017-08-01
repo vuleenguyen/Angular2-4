@@ -8,12 +8,5 @@ import { UsersService } from "app/users.service";
   providers: [UsersService]
 })
 export class AppComponent {
-  activeUsers = [];
-  inactiveUsers = [];
-
-  constructor(private usersService: UsersService) {
-    this.activeUsers = this.usersService.activeUsers;
-    this.inactiveUsers = this.usersService.inactiveUsers;
-  }
- 
+  
 }

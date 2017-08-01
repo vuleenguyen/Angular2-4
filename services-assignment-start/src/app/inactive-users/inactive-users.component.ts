@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UsersService } from "app/users.service";
 import { CounterService } from "app/counter.service";
 
@@ -9,14 +9,17 @@ import { CounterService } from "app/counter.service";
   providers: [CounterService]
 
 })
-export class InactiveUsersComponent {
-  @Input() users: string[];
+export class InactiveUsersComponent implements OnInit {
+  users: string[];
   
   constructor(private usersService: UsersService, private counterService: CounterService) {}
 
+  ngOnInit() {
+    this.users = this.usersService.inactiveUsers;
+  }
+
   onSetToActive(id: number) {
     this.usersService.onSetToActive(id);
-    
     console.log("The amount convert from InActive to Active: " + ++this.counterService.count);
   }
 
