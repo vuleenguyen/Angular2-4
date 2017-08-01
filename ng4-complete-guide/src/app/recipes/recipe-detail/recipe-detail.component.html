@@ -15,9 +15,9 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="#" appItemdecorate>Add Ingredient to Shopping List</a></li>
-        <li><a href="#" appItemdecorate>Edit Recipe</a></li>
-        <li><a href="#" appItemdecorate>Delete Recipe</a></li>
+        <li><a appItemdecorate style="cursor:pointer" (click)="onAddToShoppingList()">Add Ingredient to Shopping List</a></li>
+        <li><a appItemdecorate>Edit Recipe</a></li>
+        <li><a appItemdecorate>Delete Recipe</a></li>
       </ul>
     </div>
   </div>
@@ -28,7 +28,11 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-12">
-    Ingredients
+  <div class="col-xs-12" >
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+        {{ ingredient.name }} ({{ingredient.amount}})
+      </li>
+    </ul>
   </div>
 </div>
