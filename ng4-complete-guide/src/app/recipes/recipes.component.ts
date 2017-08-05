@@ -1,6 +1,7 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { Recipe } from "./recipe.model";
 import { RecipeService } from "./recipe.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-recipes',
@@ -10,13 +11,7 @@ import { RecipeService } from "./recipe.service";
 })
 export class RecipesComponent implements OnInit {
 
-  selectedRecipe: Recipe;
-  constructor(private recipeService: RecipeService) { }
-
   ngOnInit() {
-      this.recipeService.recipeWasSelected.subscribe(
-        (recipe: Recipe) => {this.selectedRecipe = recipe}
-      );
   }
 
 }
