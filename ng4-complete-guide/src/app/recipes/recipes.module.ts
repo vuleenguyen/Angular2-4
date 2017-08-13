@@ -11,6 +11,7 @@ import { CommonModule } from "@angular/common";
 import { RecipesRoutingModule } from "./recipes-routing.module";
 import { DropdownDirective } from "../shared/dropdown.directive";
 import { SharedModule } from "../shared/shared.module";
+import { AuthGuard } from "../auth/auth-guard.service";
 
 @NgModule({
     declarations : [
@@ -27,9 +28,6 @@ import { SharedModule } from "../shared/shared.module";
         RecipesRoutingModule,
         SharedModule
     ],
-    providers: [],
-    exports: [],
-    bootstrap: []
 })
 export class RecipesModule {
 

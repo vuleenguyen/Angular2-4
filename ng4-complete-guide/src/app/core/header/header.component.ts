@@ -1,9 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core'
-import { RecipeService } from "../recipes/recipe.service";
-import { Recipe } from "../recipes/recipe.model";
-import { DataStorageService } from "../shared/data-storage.service";
-import { ActivatedRoute, Router } from "@angular/router";
-import { AuthService } from "../auth/auth.service";
+import { DataStorageService } from "../../shared/data-storage.service";
+import { AuthService } from "../../auth/auth.service";
+import { Recipe } from "../../recipes/recipe.model";
 
 @Component({
     selector: 'app-header',
