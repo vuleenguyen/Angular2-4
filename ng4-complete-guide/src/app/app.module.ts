@@ -10,6 +10,7 @@ import { HttpModule } from "@angular/http";
 import { ShoppingListModule } from "./shopping-list/shopping-list.module";
 import { AuthModule } from "./auth/auth.module";
 import { CoreModule } from "./core/core.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CoreModule } from "./core/core.module";
     HttpModule,
     ShoppingListModule,
     AuthModule,
-    CoreModule
+    CoreModule,
+    BrowserAnimationsModule
   ],
   bootstrap: [AppComponent]
 })
